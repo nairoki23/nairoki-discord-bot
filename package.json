@@ -2,6 +2,10 @@
   "name": "discord-nairoki-bot",
   "packageManager": "yarn@4.1.0",
   "dependencies": {
+    "@prisma/client": "^5.10.2",
     "discord.js": "^14.14.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.10.2"
   }
 }

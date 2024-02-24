@@ -11,6 +11,7 @@
 
 #!.yarn/cache
 .pnp.*
-env.json
+discord_env.json
 .idea/*
 node_modules/*
+.env

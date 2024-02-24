@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:16
+    environment:
+      - TZ=Asia/Tokyo
+      - POSTGRES_PASSWORD=nairoki_discord_bot
+      - POSTGRES_USER=nairoki_discord_bot
+      - POSTGRES_DB=nairoki_discord_bot
+    ports:
+      - 15432:5432
+    volumes: # 名前付きボリュームの割り当て定義を追加
+      - db-data:/var/lib/postgresql/data
+
+
+# 名前付きボリュームの定義を追加
+volumes:
+  db-data:
+    driver: local

@@ -11,12 +11,3 @@ module.exports = {
     await interaction.reply('sarsare');
   },
 };
-
-// module.exportsの補足
-// キー・バリューの連想配列のような形で構成されています。
-//
-// module.exports = {
-//    キー: バリュー,
-//    キー: バリュー,
-// };
-//
