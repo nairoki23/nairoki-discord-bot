@@ -14,10 +14,9 @@ datasource db {
 }
 
 model Alias {
-  id        Int      @id @default(autoincrement())
+  roleId    BigInt   @id @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  guildId   BigInt //DiscordのSnowflakeって言う方式のidはBigIntじゃないと収まらない。
+  guildId   BigInt // DiscordのSnowflakeって言う方式のidはBigIntじゃないと収まらない。
   memberId  BigInt
-  roleId    BigInt
 }
