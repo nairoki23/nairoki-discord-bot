@@ -6,6 +6,7 @@ const {PrismaClient} = require('@prisma/client')
 // hey.jsのmodule.exportsを呼び出します。
 const heyFile = require('./commands/hey.js');
 const alias_list = require('./commands/alias_list');
+const make_alias = require('./commands/make_alias');
 
 
 // 設定ファイルからトークン情報を呼び出し、変数に保存します
@@ -40,7 +41,10 @@ client.on(Events.InteractionCreate, async interaction => {
       await heyFile.execute(interaction);
     } else if (interaction.commandName === alias_list.data.name) {
       await alias_list.execute(interaction)
-    } else {
+    }else if (interaction.commandName === make_alias.data.name) {
+      await make_alias.execute(interaction)
+    }
+    else {
       console.error(`${interaction.commandName}というコマンドには対応していません。`);
     }
   } catch (error) {
